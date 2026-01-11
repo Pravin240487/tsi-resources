@@ -3,7 +3,8 @@ provider "aws" {
 }
 
 module "graviton_ec2" {
-  source = "./terraform_modules/ec2"
+#  source = "./terraform_modules/ec2"
+  source = "git::https://github.com/Pravin240487/tsi-modules//ec2"
 
   instance_name         = var.instance_name
   subnet_id             = var.subnet_id
